@@ -1,16 +1,27 @@
+import Container from './Container/Container';
+import { FormPhone } from './Form/FormPhone';
+import { ContactsList } from './ContactsList/ContactsList';
+import Search from './Search/Search';
+import { useSelector } from 'react-redux';
+
 export const App = () => {
+  const { contacts } = useSelector(state => state.contacts);
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Container title="Phone book">
+        <FormPhone />
+      </Container>
+      <Container title="Contacts">
+        {contacts.length ? (
+          <>
+            <Search />
+            <ContactsList />
+          </>
+        ) : (
+          <p>Empty</p>
+        )}
+      </Container>
+    </>
   );
 };
