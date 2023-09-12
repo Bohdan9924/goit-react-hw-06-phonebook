@@ -1,27 +1,19 @@
-import Container from './Container/Container';
-import { FormPhone } from './Form/FormPhone';
-import { ContactsList } from './ContactsList/ContactsList';
-import Search from './Search/Search';
-import { useSelector } from 'react-redux';
+import ContactForm from 'components/ContactForm';
+import Filter from 'components/Filter';
+import ContactList from 'components/ContactList';
 
-export const App = () => {
-  const { contacts } = useSelector(state => state.contacts);
 
+const App = () => {
   return (
     <>
-      <Container title="Phone book">
-        <FormPhone />
-      </Container>
-      <Container title="Contacts">
-        {contacts.length ? (
-          <>
-            <Search />
-            <ContactsList />
-          </>
-        ) : (
-          <p>Empty</p>
-        )}
-      </Container>
+      <h1>Phonebook</h1>
+      <ContactForm />
+
+      <h2>Contacts</h2>
+      <Filter />
+      <ContactList />
     </>
   );
 };
+
+export default App;

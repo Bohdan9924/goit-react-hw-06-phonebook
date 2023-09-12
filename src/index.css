@@ -1,7 +1,12 @@
-@import-normalize;
+@import-normalize; /* bring in normalize.css styles */
+/* @import 'reset-css'; */
 
 body {
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -13,52 +18,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* Reset styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
+
+#root {
+  width: 420px;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  color: currentColor;
-  text-decoration: none;
-}
-
-button {
-  color: inherit;
-  cursor: pointer;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-input,
-textarea {
-  outline: none;
-}
-
-section {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 40px 50px;
-
-  width: 750px;
-}
-
-h2 {
-  margin-bottom: 20px;
+input {
+  margin-top: 10px;
+  padding: 10px;
 }
